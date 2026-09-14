@@ -160,23 +160,4 @@ items.forEach(i=>observer.observe(i));
 </body>
 </html>'''
 
-(out/"index.php").write_text(html, encoding="utf-8")
-(out/"README.md").write_text("""# CYBER ABDULLOH
 
-Railway uchun tayyor PHP portfolio.
-
-## GitHub
-Repo root ichida `index.php` bo‘lishi kerak.
-
-## Aloqa
-Telegram: @Asqarov_0207
-
-GitHub havolasi sayt dizayniga qo‘shilmagan.
-""", encoding="utf-8")
-
-zip_path=Path("/mnt/data/CYBER-ABDULLOH-REAL-SITE.zip")
-with zipfile.ZipFile(zip_path,"w",zipfile.ZIP_DEFLATED) as z:
-    z.write(out/"index.php","index.php")
-    z.write(out/"README.md","README.md")
-
-print(zip_path)
