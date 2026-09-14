@@ -3,83 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CYBER ABDULLOH — Full-stack & AI Developer</title>
-<meta name="description" content="Cyber Abdulloh — Full-stack, Telegram bot va AI dasturchi.">
+<title>CYBER ABDULLOH</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050706;--panel:#0a0f0b;--panel2:#0e1610;--line:#19301e;--text:#e7ffe9;--muted:#719879;--green:#00ff55;--green2:#63ff8d}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:Inter,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 80% 10%,#00ff5514,transparent 30%),radial-gradient(circle at 10% 70%,#00ff5508,transparent 35%);pointer-events:none}
-a{text-decoration:none;color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 25px;position:relative;z-index:2}
-header{position:sticky;top:0;z-index:100;background:#050706d9;border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
-nav{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:"JetBrains Mono";font-weight:700;font-size:18px}.logo b{color:var(--green)}
-.nav{display:flex;gap:28px;color:var(--muted);font-size:14px}.nav a:hover{color:var(--green)}.menu{display:none;color:var(--green);font-size:26px}
-.hero{min-height:700px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;padding:80px 0}
-.badge{display:inline-flex;gap:9px;align-items:center;border:1px solid #1d4b27;background:#08130b;padding:8px 13px;border-radius:999px;color:var(--green2);font:600 12px "JetBrains Mono";margin-bottom:22px}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 15px var(--green)}
-h1{font-size:clamp(48px,7vw,86px);line-height:.92;letter-spacing:-4px;margin-bottom:25px}h1 span{color:var(--green);text-shadow:0 0 30px #00ff5544}
-.lead{max-width:650px;color:#8eae94;font-size:17px;line-height:1.8;margin-bottom:32px}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 20px;border-radius:8px;border:1px solid var(--line);font-weight:700;font-size:14px}.primary{background:var(--green);color:#031007;border-color:var(--green);box-shadow:0 0 25px #00ff5522}.btn:hover{transform:translateY(-2px)}
-.terminal{background:linear-gradient(145deg,#0c140e,#050806);border:1px solid #214727;border-radius:18px;box-shadow:0 25px 80px #000;overflow:hidden}.top{padding:13px 16px;border-bottom:1px solid var(--line);display:flex;gap:7px}.top i{width:9px;height:9px;border-radius:50%;background:#244c2d}.screen{padding:25px;font:13px/2 "JetBrains Mono";color:#79aa81;min-height:310px}.screen .g{color:var(--green)}.screen .w{color:#e4ffe8}
-section{padding:95px 0;border-top:1px solid var(--line)}.eyebrow{color:var(--green);font:600 12px "JetBrains Mono";margin-bottom:10px}.title{font-size:38px;letter-spacing:-1.5px;margin-bottom:12px}.sub{color:var(--muted);max-width:650px;line-height:1.7;margin-bottom:40px}
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.card{background:linear-gradient(150deg,#0c140e,#070b08);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-6px);border-color:#2f713b;box-shadow:0 20px 50px #000}.cover{height:190px;background-size:cover;background-position:center;position:relative}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#061009 0%,transparent 70%)}.cardbody{padding:22px}.tag{display:inline-block;color:var(--green);font:600 11px "JetBrains Mono";border:1px solid #24582e;padding:5px 9px;border-radius:5px;margin-bottom:12px}.card h3{font-size:22px;margin-bottom:9px}.card p{color:var(--muted);font-size:14px;line-height:1.7}.stack{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}.stack span{font:11px "JetBrains Mono";padding:5px 8px;background:#101b12;color:#86aa8c;border-radius:5px}
-.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:12px 15px;border:1px solid var(--line);border-radius:8px;background:#09100b;color:#9fc4a4;font:12px "JetBrains Mono"}.skill:hover{border-color:var(--green);color:var(--green)}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contactbox{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px}.contactbox p{color:var(--muted);line-height:1.7;margin:15px 0 22px}.links{display:grid;gap:10px}.links a{padding:13px 15px;border:1px solid var(--line);border-radius:8px;color:#9fc4a4}.links a:hover{color:var(--green);border-color:#2e7039}
-form{display:grid;gap:13px}input,textarea{width:100%;background:#050806;border:1px solid var(--line);color:white;padding:14px;border-radius:8px;font:14px Inter}input:focus,textarea:focus{outline:0;border-color:var(--green)}textarea{min-height:130px;resize:vertical}
-footer{padding:35px 0;color:#55755c;font:12px "JetBrains Mono";display:flex;justify-content:space-between;border-top:1px solid var(--line)}
-.reveal{opacity:0;transform:translateY(25px);transition:.7s}.reveal.show{opacity:1;transform:none}
-@media(max-width:800px){.nav{display:none}.menu{display:block}.hero{grid-template-columns:1fr;padding:65px 0}.projects,.contact{grid-template-columns:1fr}h1{letter-spacing:-2px}.terminal{display:none}section{padding:70px 0}}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#090d0b;--panel:#101713;--green:#b7ff2a;--green2:#72d600;--text:#f4f7f2;--muted:#9aa59d;--line:rgba(183,255,42,.15)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Barlow Condensed",sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 78% 15%,rgba(183,255,42,.08),transparent 28%),radial-gradient(circle at 10% 80%,rgba(72,160,0,.06),transparent 25%);pointer-events:none}
+.container{width:min(1180px,92%);margin:auto}
+.topline{height:4px;background:var(--green)}
+header{position:fixed;z-index:100;top:4px;left:0;width:100%;background:rgba(9,13,11,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Orbitron;font-weight:800;font-size:22px;letter-spacing:2px}
+.logo span{color:var(--green)}
+nav{display:flex;gap:32px}
+nav a{font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#dce2dc;transition:.25s}
+nav a:hover{color:var(--green)}
+.nav-btn{padding:12px 20px;border:1px solid var(--green);color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.hero{min-height:100vh;padding:160px 0 90px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;position:relative}
+.eyebrow{color:var(--green);font-weight:700;letter-spacing:4px;text-transform:uppercase;font-size:15px;margin-bottom:18px}
+h1{font-family:Orbitron;font-size:clamp(45px,7vw,86px);line-height:.98;letter-spacing:-3px}
+h1 span{color:var(--green)}
+.hero p{color:var(--muted);font-size:21px;line-height:1.5;max-width:610px;margin:25px 0 32px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:15px 27px;font-weight:800;text-transform:uppercase;letter-spacing:1px;border:1px solid var(--green);transition:.25s}
+.btn.primary{background:var(--green);color:#071000}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(183,255,42,.18)}
+.btn.dark{background:transparent;color:var(--green)}
+.visual{position:relative}
+.visual-card{min-height:500px;border:1px solid var(--line);background:linear-gradient(145deg,#111a15,#0b100d);position:relative;overflow:hidden}
+.visual-card img{width:100%;height:100%;min-height:500px;object-fit:cover;opacity:.62;filter:saturate(.7) contrast(1.1)}
+.visual-card:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,13,11,.88),transparent 65%),linear-gradient(0deg,rgba(9,13,11,.8),transparent 50%)}
+.terminal{position:absolute;z-index:2;left:28px;bottom:28px;width:calc(100% - 56px);padding:22px;background:rgba(5,9,7,.83);border:1px solid rgba(183,255,42,.28);backdrop-filter:blur(10px)}
+.terminal b{color:var(--green);font-family:monospace}.terminal p{font:14px/1.8 monospace;color:#d4ddd4;margin:0}.cursor{display:inline-block;width:8px;height:15px;background:var(--green);vertical-align:middle}
+.section{padding:110px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px;border-bottom:1px solid var(--line);padding-bottom:20px}
+.kicker{color:var(--green);letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.section h2{font-family:Orbitron;font-size:clamp(30px,5vw,52px);margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--panel);border:1px solid rgba(255,255,255,.07);overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:rgba(183,255,42,.4)}
+.card-img{height:220px;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.06)}
+.card-body{padding:25px}.card-body h3{font-family:Orbitron;font-size:20px;margin-bottom:10px}.card-body p{color:var(--muted);font-size:17px;line-height:1.4}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.tag{border:1px solid var(--line);padding:5px 9px;color:var(--green);font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.stat{background:var(--panel);padding:28px}.stat strong{font-family:Orbitron;color:var(--green);font-size:34px;display:block}.stat span{color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.skill{padding:22px;background:var(--panel);border-left:3px solid var(--green);font-size:19px;font-weight:700}
+.contact{background:linear-gradient(135deg,#111a14,#0a0f0c);border:1px solid var(--line);padding:55px;display:flex;justify-content:space-between;gap:40px;align-items:center}.contact h2{font-family:Orbitron;font-size:clamp(28px,4vw,48px)}.contact p{color:var(--muted);font-size:19px;margin-top:10px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:#768078;text-align:center}
+.mobile{display:none}
+@media(max-width:850px){nav,.nav-btn{display:none}.mobile{display:block;color:var(--green);font-size:25px}.hero{grid-template-columns:1fr;padding-top:135px}.visual-card,.visual-card img{min-height:400px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.skills{grid-template-columns:repeat(2,1fr)}.contact{padding:32px;display:block}.contact .btn{margin-top:25px}}
 </style>
 </head>
 <body>
-<header><nav class="wrap"><a class="logo" href="#">CYBER_<b>ABDULLOH</b></a><div class="nav"><a href="#loyihalar">Loyihalar</a><a href="#skills">Ko‘nikmalar</a><a href="#aloqa">Aloqa</a></div><div class="menu">☰</div></nav></header>
+<div class="topline"></div>
+<header><div class="container nav">
+<a class="logo" href="#home">CYBER <span>ABDULLOH</span></a>
+<nav><a href="#home">Bosh sahifa</a><a href="#projects">Loyihalar</a><a href="#skills">Ko'nikmalar</a><a href="#contact">Aloqa</a></nav>
+<a class="nav-btn" href="https://t.me/Asqarov_0207">Bog'lanish</a><div class="mobile">☰</div>
+</div></header>
 
-<main class="wrap">
-<section class="hero" style="border:0">
-<div class="reveal">
-<div class="badge"><span class="dot"></span> AVAILABLE FOR PROJECTS</div>
-<h1>Cyber<br><span>Abdulloh.</span></h1>
-<p class="lead">Full-stack va AI dasturchi. Telegram botlar, zamonaviy web tizimlar, MySQL bazalar va avtomatlashtirilgan raqamli yechimlar yarataman.</p>
-<div class="buttons"><a class="btn primary" href="#loyihalar">Loyihalarni ko‘rish →</a><a class="btn" href="#aloqa">Bog‘lanish</a></div>
+<main>
+<section class="container hero" id="home">
+<div>
+<div class="eyebrow">Full-Stack Developer / Cyber Creator</div>
+<h1>MEN <span>RAQAMLI</span><br>G'oyalarni<br>YARATAMAN.</h1>
+<p>Professional web saytlar, Telegram botlar va zamonaviy raqamli loyihalarni yarataman. G'oya — kodga, kod esa real mahsulotga aylanadi.</p>
+<div class="buttons"><a class="btn primary" href="#projects">Loyihalarni ko'rish</a><a class="btn dark" href="https://t.me/Asqarov_0207">Telegram orqali yozish</a></div>
 </div>
-<div class="terminal reveal"><div class="top"><i></i><i></i><i></i></div><div class="screen"><div><span class="g">$</span> whoami</div><div class="w">abdulloh@cyber:~$</div><br><div><span class="g">role</span> = "Full-stack Developer"</div><div><span class="g">focus</span> = ["PHP","AI","Telegram"]</div><div><span class="g">status</span> = "online"</div><div><span class="g">location</span> = "Tashkent, UZ"</div><br><div class="w">⚡ Building useful things.</div><div class="g">_</div></div></div>
+<div class="visual">
+<div class="visual-card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85" alt="Cyber technology">
+<div class="terminal">
+<p><b>root@cyber-abdulloh:~$</b> system.start()</p>
+<p>Web development ........ <b>ONLINE</b></p>
+<p>Telegram bots .......... <b>ONLINE</b></p>
+<p>AI projects ............ <b>ONLINE</b></p>
+<p>status: <b>READY</b> <span class="cursor"></span></p>
+</div></div></div>
 </section>
 
-<section id="loyihalar">
-<div class="eyebrow">// 01 — PROJECTS</div><h2 class="title">Haqiqiy loyihalar</h2><p class="sub">Portfolio faqat chiroyli ko‘rinish emas — real ishlaydigan tizimlar va amaliy yechimlar.</p>
-<div class="projects">
-<article class="card reveal"><div class="cover" style="background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=90')"></div><div class="cardbody"><span class="tag">LIVE PROJECT</span><h3>SmashBite</h3><p>Ovqat buyurtma qilish web-tizimi. Menyu, savat, buyurtmalar va MySQL bilan ishlash uchun tayyorlangan.</p><div class="stack"><span>PHP</span><span>MySQL</span><span>Railway</span></div></div></article>
-<article class="card reveal"><div class="cover" style="background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=90')"></div><div class="cardbody"><span class="tag">AI / BOT</span><h3>Telegram AI Bot</h3><p>Foydalanuvchilar bilan tabiiy tilda muloqot qiluvchi, AI API bilan integratsiyalangan Telegram bot.</p><div class="stack"><span>Node.js</span><span>Telegraf</span><span>AI API</span></div></div></article>
-<article class="card reveal"><div class="cover" style="background-image:url('https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=1200&q=90')"></div><div class="cardbody"><span class="tag">AUTOMATION</span><h3>Video Save Bot</h3><p>Telegram orqali ijtimoiy tarmoqlardan media yuklashga mo‘ljallangan avtomatlashtirilgan bot.</p><div class="stack"><span>Python</span><span>Telegram</span><span>yt-dlp</span></div></div></article>
-<article class="card reveal"><div class="cover" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=90')"></div><div class="cardbody"><span class="tag">WEB DEVELOPMENT</span><h3>Cyber Portfolio</h3><p>Minimal, tezkor va mobilga mos portfolio sayt. Matrix effekt, terminal UI va zamonaviy dark dizayn.</p><div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div></article>
-</div>
+<section class="container section">
+<div class="stats"><div class="stat"><strong>15+</strong><span>Loyihalar</span></div><div class="stat"><strong>3+</strong><span>Yillik tajriba</span></div><div class="stat"><strong>24/7</strong><span>Support</span></div><div class="stat"><strong>100%</strong><span>Dedication</span></div></div>
 </section>
 
-<section id="skills">
-<div class="eyebrow">// 02 — STACK</div><h2 class="title">Texnologiyalar</h2><p class="sub">Loyihani vazifaga qarab kerakli texnologiyalar bilan quraman.</p>
-<div class="skills reveal">
-<span class="skill">PHP</span><span class="skill">Python</span><span class="skill">Node.js</span><span class="skill">JavaScript</span><span class="skill">MySQL</span><span class="skill">Telegram Bot API</span><span class="skill">REST API</span><span class="skill">Git / GitHub</span><span class="skill">Railway</span><span class="skill">Docker</span><span class="skill">AI API</span><span class="skill">Linux</span>
-</div>
-</section>
+<section class="section" id="projects"><div class="container">
+<div class="section-head"><div><div class="kicker">Portfolio</div><h2>Asosiy loyihalar</h2></div><div class="kicker">01 / 04</div></div>
+<div class="grid">
+<article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85" alt="SmashBite"></div><div class="card-body"><h3>SmashBite</h3><p>Fast-food uchun zamonaviy web platforma, mahsulotlar, savat va buyurtma tizimi.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JS</span></div></div></article>
+<article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85" alt="AI Bot"></div><div class="card-body"><h3>Telegram AI Bot</h3><p>Telegram ichida foydalanuvchi bilan ishlaydigan aqlli AI yordamchi.</p><div class="tags"><span class="tag">Python</span><span class="tag">AI</span><span class="tag">Telegram</span></div></div></article>
+<article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=900&q=85" alt="Video bot"></div><div class="card-body"><h3>Video Save UZ</h3><p>Instagram, TikTok va boshqa platformalardan media yuklash uchun Telegram bot.</p><div class="tags"><span class="tag">Python</span><span class="tag">yt-dlp</span><span class="tag">Railway</span></div></div></article>
+</div></div></section>
 
-<section id="aloqa">
-<div class="eyebrow">// 03 — CONTACT</div><h2 class="title">Loyiha bormi?</h2><p class="sub">G‘oyangizni yozing. Birgalikda uni ishlaydigan raqamli mahsulotga aylantiramiz.</p>
-<div class="contact">
-<div class="contactbox reveal"><h3>To‘g‘ridan-to‘g‘ri bog‘lanish</h3><p>Telegram orqali tezroq javob beraman.</p><div class="links"><a href="https://t.me/Asqarov_0207" target="_blank">✈ Telegram — @Asqarov_0207</a><a href="https://github.com/abdullohasqarov202-glitch" target="_blank">⌘ GitHub — abdullohasqarov202-glitch</a></div></div>
-<div class="contactbox reveal"><form onsubmit="sendTelegram(event)"><input id="name" placeholder="Ismingiz" required><input id="contact" placeholder="Telegram / telefon" required><textarea id="message" placeholder="Loyiha haqida yozing..." required></textarea><button class="btn primary" type="submit">Telegram orqali yuborish →</button></form></div>
-</div>
-</section>
+<section class="section" id="skills"><div class="container">
+<div class="section-head"><div><div class="kicker">Technology</div><h2>Ko'nikmalar</h2></div></div>
+<div class="skills"><div class="skill">PHP / MySQL</div><div class="skill">Python</div><div class="skill">JavaScript</div><div class="skill">HTML / CSS</div><div class="skill">Telegram Bots</div><div class="skill">WordPress</div><div class="skill">Git & Railway</div><div class="skill">AI Integration</div></div>
+</div></section>
+
+<section class="section" id="contact"><div class="container"><div class="contact"><div><div class="kicker">Let's work</div><h2>LOYIHA BORMI?</h2><p>G'oyangizni birga professional mahsulotga aylantiramiz.</p></div><a class="btn primary" href="https://t.me/Asqarov_0207">Telegramda bog'lanish →</a></div></div></section>
 </main>
-<footer class="wrap"><span>© 2026 CYBER ABDULLOH</span><span>Built with ⚡ in Tashkent</span></footer>
-<script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-function sendTelegram(e){
- e.preventDefault();
- const n=document.getElementById('name').value,c=document.getElementById('contact').value,m=document.getElementById('message').value;
- const text=`Salom Abdulloh!%0A%0A👤 Ism: ${encodeURIComponent(n)}%0A📞 Aloqa: ${encodeURIComponent(c)}%0A💬 Xabar: ${encodeURIComponent(m)}`;
- window.open('https://t.me/Asqarov_0207?text='+text,'_blank');
-}
-</script>
+<footer>© 2026 CYBER ABDULLOH — Full-Stack Developer</footer>
 </body>
 </html>
