@@ -1,173 +1,1481 @@
+
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Abdulloh — Web Developer, Bot & AI Bot Developer. Zamonaviy saytlar, Telegram botlar va AI yechimlar." />
-  <title>ABDULLOH — Web Developer & AI Bot Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abdulloh Asqarov — Full-Stack Developer</title>
+
+    <meta name="description"
+          content="Abdulloh Asqarov — Web saytlar, Telegram botlar va raqamli yechimlar ishlab chiquvchi Full-Stack Developer.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #080a09;
+            --surface: #0d100f;
+            --surface-2: #121613;
+            --border: rgba(255,255,255,.09);
+
+            --green: #b8ff35;
+            --green-dark: #8dcc19;
+
+            --white: #f5f7f5;
+            --gray: #929b94;
+            --gray2: #68716b;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--white);
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden;
+        }
+
+        body::selection {
+            background: var(--green);
+            color: #050805;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .container {
+            width: min(1160px, 90%);
+            margin: auto;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(8,10,9,.78);
+            backdrop-filter: blur(20px);
+
+            border-bottom: 1px solid rgba(255,255,255,.06);
+        }
+
+        .nav {
+            height: 76px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -.5px;
+        }
+
+        .brand span {
+            color: var(--green);
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .menu a {
+            color: #adb5af;
+            font-size: 14px;
+            font-weight: 500;
+            transition: .25s;
+        }
+
+        .menu a:hover {
+            color: var(--white);
+        }
+
+        .header-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            border: 1px solid rgba(184,255,53,.3);
+            padding: 10px 15px;
+            border-radius: 7px;
+
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: .25s;
+        }
+
+        .header-contact:hover {
+            background: var(--green);
+            color: #080a09;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 76px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .hero-content {
+            padding: 80px 0;
+        }
+
+        .available {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            color: var(--gray);
+            font-size: 13px;
+            margin-bottom: 26px;
+        }
+
+        .available-dot {
+            width: 8px;
+            height: 8px;
+
+            background: var(--green);
+            border-radius: 50%;
+
+            box-shadow: 0 0 13px rgba(184,255,53,.8);
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(46px, 6vw, 76px);
+            line-height: .98;
+
+            letter-spacing: -4px;
+            font-weight: 700;
+        }
+
+        .hero h1 span {
+            color: var(--green);
+        }
+
+        .hero-description {
+            color: var(--gray);
+            font-size: 17px;
+            line-height: 1.7;
+
+            max-width: 560px;
+            margin-top: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 34px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 20px;
+            border-radius: 7px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: .25s;
+        }
+
+        .button-primary {
+            background: var(--green);
+            color: #071006;
+        }
+
+        .button-primary:hover {
+            background: #d0ff72;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 1px solid var(--border);
+            color: var(--white);
+        }
+
+        .button-outline:hover {
+            border-color: rgba(184,255,53,.4);
+            color: var(--green);
+        }
+
+        /* ================= HERO IMAGE ================= */
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-image {
+            position: relative;
+
+            height: 570px;
+
+            overflow: hidden;
+            border-radius: 14px;
+
+            border: 1px solid var(--border);
+
+            background: var(--surface);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: brightness(.72) saturate(.78);
+        }
+
+        .hero-image::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(5,8,6,.88),
+                    transparent 55%
+                );
+        }
+
+        .image-caption {
+            position: absolute;
+            z-index: 2;
+
+            left: 25px;
+            right: 25px;
+            bottom: 25px;
+
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .image-caption small {
+            color: #aab3ac;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .image-caption strong {
+            font-family: "Space Grotesk";
+            font-size: 22px;
+        }
+
+        .image-number {
+            width: 43px;
+            height: 43px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid rgba(184,255,53,.4);
+            color: var(--green);
+
+            border-radius: 50%;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .section-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            margin-bottom: 42px;
+        }
+
+        .section-label {
+            color: var(--green);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: "Space Grotesk";
+
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+        }
+
+        .section-text {
+            color: var(--gray);
+            max-width: 390px;
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+
+            padding: 50px;
+
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .about-title {
+            font-family: "Space Grotesk";
+            font-size: 29px;
+            line-height: 1.2;
+        }
+
+        .about-title span {
+            color: var(--green);
+        }
+
+        .about-text {
+            margin-top: 20px;
+
+            color: var(--gray);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .about-list {
+            display: grid;
+            gap: 1px;
+
+            background: var(--border);
+        }
+
+        .about-item {
+            background: var(--surface);
+
+            display: flex;
+            justify-content: space-between;
+
+            padding: 18px 20px;
+        }
+
+        .about-item span {
+            color: var(--gray2);
+            font-size: 13px;
+        }
+
+        .about-item strong {
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            transition: .3s;
+        }
+
+        .project:hover {
+            transform: translateY(-6px);
+            border-color: rgba(184,255,53,.35);
+        }
+
+        .project-image {
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            height: 100%;
+            object-fit: cover;
+
+            filter: brightness(.8) saturate(.75);
+
+            transition: .5s;
+        }
+
+        .project:hover .project-image img {
+            transform: scale(1.05);
+            filter: brightness(.9) saturate(.9);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-category {
+            color: var(--green);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .project h3 {
+            font-family: "Space Grotesk";
+
+            font-size: 21px;
+            margin: 8px 0;
+        }
+
+        .project p {
+            color: var(--gray);
+
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+        .project-footer {
+            margin-top: 20px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .tag {
+            color: #b5beb7;
+
+            border: 1px solid rgba(255,255,255,.08);
+
+            border-radius: 5px;
+            padding: 5px 8px;
+
+            font-size: 11px;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .skill {
+            min-height: 120px;
+
+            padding: 22px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            transition: .25s;
+        }
+
+        .skill:hover {
+            border-color: rgba(184,255,53,.35);
+        }
+
+        .skill-number {
+            color: var(--green);
+            font-size: 11px;
+        }
+
+        .skill-name {
+            font-family: "Space Grotesk";
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 20px;
+        }
+
+        .contact-main {
+            min-height: 380px;
+
+            padding: 45px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111811,
+                    #0b0e0c
+                );
+
+            border: 1px solid var(--border);
+            border-radius: 14px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-main h2 {
+            font-family: "Space Grotesk";
+
+            font-size: clamp(33px, 4vw, 52px);
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            margin-top: 9px;
+        }
+
+        .contact-main h2 span {
+            color: var(--green);
+        }
+
+        .contact-main p {
+            color: var(--gray);
+
+            max-width: 600px;
+
+            font-size: 15px;
+            line-height: 1.75;
+
+            margin: 20px 0 28px;
+        }
+
+        .contact-card {
+            padding: 32px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .contact-card-title {
+            font-family: "Space Grotesk";
+            font-size: 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            padding: 18px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.07);
+        }
+
+        .contact-item:last-child {
+            border-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+
+            flex: 0 0 45px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 8px;
+
+            color: var(--green);
+
+            background: rgba(184,255,53,.05);
+            border: 1px solid rgba(184,255,53,.15);
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .contact-item small {
+            display: block;
+
+            color: var(--gray2);
+
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            margin-bottom: 4px;
+        }
+
+        .contact-item strong {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .contact-item.telegram strong {
+            color: var(--green);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+
+            padding: 28px 0;
+
+            color: var(--gray2);
+            font-size: 12px;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-brand {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .footer-brand span {
+            color: var(--green);
+        }
+
+        /* ================= ANIMATION ================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+
+            transition:
+                opacity .7s ease,
+                transform .7s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 900px) {
+
+            .menu,
+            .header-contact {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content {
+                padding: 70px 0 20px;
+            }
+
+            .hero-image {
+                height: 470px;
+            }
+
+            .about,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .container {
+                width: 92%;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                padding-top: 80px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+                letter-spacing: -2.5px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .hero-image {
+                height: 390px;
+            }
+
+            .section-top {
+                display: block;
+            }
+
+            .section-text {
+                margin-top: 14px;
+            }
+
+            .about {
+                padding: 25px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-main {
+                padding: 30px;
+            }
+
+            .footer-inner {
+                display: block;
+                text-align: center;
+            }
+
+            .footer-inner div + div {
+                margin-top: 7px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-  <div class="noise"></div>
-  <div class="cursor-glow"></div>
 
-  <header class="nav">
-    <a class="logo" href="#home">A<span>.</span></a>
-    <nav>
-      <a href="#about">Men haqimda</a>
-      <a href="#services">Xizmatlar</a>
-      <a href="#work">Ishlar</a>
-      <a href="#contact">Aloqa</a>
-    </nav>
-    <a class="nav-cta" href="#contact">Loyiha boshlash <span>↗</span></a>
-    <button class="menu" aria-label="Menu">☰</button>
-  </header>
+<header>
 
-  <main>
-    <section id="home" class="hero section">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="dot"></span> AVAILABLE FOR NEW PROJECTS</p>
-        <h1>Men <em>raqamli</em><br>tajribalar yarataman.</h1>
-        <p class="lead">Men Abdulloh — Web Developer, Bot Developer va AI Bot Developer. Biznes uchun tez, chiroyli va aqlli raqamli mahsulotlar yarataman.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">Ishlarimni ko‘rish <span>↓</span></a>
-          <a class="btn btn-ghost" href="#contact">Bog‘lanish <span>↗</span></a>
+    <div class="container nav">
+
+        <a href="#home" class="brand">
+            CYBER <span>ABDULLOH</span>
+        </a>
+
+        <nav class="menu">
+
+            <a href="#home">
+                Bosh sahifa
+            </a>
+
+            <a href="#about">
+                Men haqimda
+            </a>
+
+            <a href="#projects">
+                Loyihalar
+            </a>
+
+            <a href="#skills">
+                Ko‘nikmalar
+            </a>
+
+            <a href="#contact">
+                Aloqa
+            </a>
+
+        </nav>
+
+        <a
+            href="https://t.me/Asqarov_0207"
+            target="_blank"
+            class="header-contact"
+        >
+            Telegram →
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="container hero" id="home">
+
+        <div class="hero-content reveal">
+
+            <div class="available">
+                <span class="available-dot"></span>
+                Yangi loyihalar uchun ochiq
+            </div>
+
+            <h1>
+                MEN <span>RAQAMLI</span><br>
+                G‘OYALARNI<br>
+                YARATAMAN.
+            </h1>
+
+            <p class="hero-description">
+                Men web saytlar, Telegram botlar va raqamli
+                mahsulotlar ishlab chiqaman. Maqsadim —
+                oddiy g‘oyani tushunarli, tezkor va ishlaydigan
+                mahsulotga aylantirish.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="#projects"
+                    class="button button-primary"
+                >
+                    Loyihalarni ko‘rish
+                </a>
+
+                <a
+                    href="https://t.me/Asqarov_0207"
+                    target="_blank"
+                    class="button button-outline"
+                >
+                    Telegram orqali yozish
+                </a>
+
+            </div>
+
         </div>
-        <div class="mini-stats">
-          <div><strong>WEB</strong><small>Development</small></div>
-          <div><strong>BOTS</strong><small>Automation</small></div>
-          <div><strong>AI</strong><small>Solutions</small></div>
+
+
+        <div class="hero-visual reveal">
+
+            <div class="hero-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=90"
+                    alt="Developer workspace"
+                >
+
+                <div class="image-caption">
+
+                    <div>
+                        <small>Abdulloh Asqarov</small>
+
+                        <strong>
+                            Full-Stack Developer
+                        </strong>
+                    </div>
+
+                    <div class="image-number">
+                        01
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
 
-      <div class="hero-visual reveal">
-        <div class="gold-orb"></div>
-        <div class="photo-frame">
-          <img src="profile.jpg" alt="Abdulloh" />
-          <div class="photo-shine"></div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="container" id="about">
+
+        <div class="section-top reveal">
+
+            <div>
+                <div class="section-label">
+                    01 / Men haqimda
+                </div>
+
+                <h2 class="section-title">
+                    Koddan ko‘ra<br>
+                    natija muhim.
+                </h2>
+            </div>
+
+            <p class="section-text">
+                Har bir loyiha faqat chiroyli ko‘rinishi emas,
+                foydalanuvchi uchun qulay va amalda ishlashi
+                kerak.
+            </p>
+
         </div>
-        <div class="floating-card card-top"><span>01</span> WEB DEVELOPMENT</div>
-        <div class="floating-card card-bottom"><span>03</span> AI × AUTOMATION</div>
-        <div class="vertical-label">ABDULLOH / 2026</div>
-      </div>
-    </section>
 
-    <section class="marquee">
-      <div class="marquee-track">
-        <span>WEB DEVELOPMENT</span><b>✦</b><span>TELEGRAM BOTS</span><b>✦</b><span>AI AUTOMATION</span><b>✦</b>
-        <span>WEB DEVELOPMENT</span><b>✦</b><span>TELEGRAM BOTS</span><b>✦</b><span>AI AUTOMATION</span><b>✦</b>
-      </div>
-    </section>
 
-    <section id="about" class="section about">
-      <div class="section-head reveal">
-        <p class="eyebrow">01 / MEN HAQIMDA</p>
-        <h2>G‘oya → <span>kod</span> → natija.</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p class="big-text">Men oddiy “sayt” emas, foydalanuvchi uchun qulay va biznesga foyda beradigan <strong>raqamli tizimlar</strong> yaratishga e’tibor beraman.</p>
-          <p>Landing page, portfolio, online xizmatlar, Telegram botlar, AI chatbotlar va avtomatlashtirish — loyihani noldan ishga tushirishgacha olib boraman.</p>
-          <a class="text-link" href="#contact">Loyihangiz haqida gaplashamiz <span>↗</span></a>
+        <div class="about reveal">
+
+            <div>
+
+                <h3 class="about-title">
+                    Web. Bot. <span>Digital.</span>
+                </h3>
+
+                <p class="about-text">
+                    Web dasturlash, Telegram botlar va
+                    raqamli avtomatlashtirish yo‘nalishida
+                    ishlayman. Loyihaning g‘oyasidan boshlab
+                    uning tayyor ishlaydigan holatigacha
+                    bo‘lgan jarayonni ishlab chiqishga e’tibor
+                    beraman.
+                </p>
+
+                <p class="about-text">
+                    Har bir interfeysda ortiqcha elementlardan
+                    qochib, foydalanuvchiga kerakli narsani
+                    aniq ko‘rsatishga harakat qilaman.
+                </p>
+
+            </div>
+
+
+            <div class="about-list">
+
+                <div class="about-item">
+                    <span>Yo‘nalish</span>
+                    <strong>Full-Stack Development</strong>
+                </div>
+
+                <div class="about-item">
+                    <span>Asosiy stack</span>
+                    <strong>PHP / Python / JS</strong>
+                </div>
+
+                <div class="about-item">
+                    <span>Botlar</span>
+                    <strong>Telegram</strong>
+                </div>
+
+                <div class="about-item">
+                    <span>Backend</span>
+                    <strong>MySQL / PHP</strong>
+                </div>
+
+                <div class="about-item">
+                    <span>Deployment</span>
+                    <strong>Railway</strong>
+                </div>
+
+            </div>
+
         </div>
-        <div class="about-quote reveal">
-          <div class="quote-mark">“</div>
-          <p>Design is not only how it looks. It is how the digital product works.</p>
-          <small>— ABDULLOH</small>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-top reveal">
+
+                <div>
+
+                    <div class="section-label">
+                        02 / Portfolio
+                    </div>
+
+                    <h2 class="section-title">
+                        Tanlangan loyihalar
+                    </h2>
+
+                </div>
+
+                <p class="section-text">
+                    Turli yo‘nalishdagi web va Telegram
+                    loyihalar.
+                </p>
+
+            </div>
+
+
+            <div class="projects">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project reveal">
+
+                    <div class="project-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=90"
+                            alt="Restaurant ordering project"
+                        >
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-category">
+                            Web Platform
+                        </div>
+
+                        <h3>
+                            SmashBite
+                        </h3>
+
+                        <p>
+                            Restoran uchun mahsulotlar,
+                            kategoriya, savat va buyurtma
+                            jarayonlarini birlashtiruvchi
+                            web platforma.
+                        </p>
+
+                        <div class="project-footer">
+
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JavaScript</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project reveal">
+
+                    <div class="project-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=90"
+                            alt="Artificial intelligence project"
+                        >
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-category">
+                            Automation
+                        </div>
+
+                        <h3>
+                            Telegram AI Bot
+                        </h3>
+
+                        <p>
+                            Telegram orqali foydalanuvchi
+                            bilan ishlash va AI asosidagi
+                            funksiyalarni avtomatlashtirish.
+                        </p>
+
+                        <div class="project-footer">
+
+                            <span class="tag">Python</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Telegram</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project reveal">
+
+                    <div class="project-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=90"
+                            alt="Social media application"
+                        >
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-category">
+                            Telegram Bot
+                        </div>
+
+                        <h3>
+                            Video Save UZ
+                        </h3>
+
+                        <p>
+                            Ijtimoiy tarmoqlardagi media
+                            kontentni Telegram orqali olish
+                            uchun ishlab chiqilgan bot.
+                        </p>
+
+                        <div class="project-footer">
+
+                            <span class="tag">Python</span>
+                            <span class="tag">yt-dlp</span>
+                            <span class="tag">Railway</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-    <section id="services" class="section services">
-      <div class="section-head reveal">
-        <p class="eyebrow">02 / XIZMATLAR</p>
-        <h2>Nima <span>qilaman?</span></h2>
-      </div>
-      <div class="service-list">
-        <article class="service reveal">
-          <span class="number">01</span>
-          <div><h3>Web Development</h3><p>Landing page, portfolio, biznes sayti va zamonaviy responsive web interfeyslar.</p></div>
-          <span class="arrow">↗</span>
-        </article>
-        <article class="service reveal">
-          <span class="number">02</span>
-          <div><h3>Telegram Bots</h3><p>Buyurtma, savdo, xizmat, admin panel va avtomatlashtirilgan Telegram botlar.</p></div>
-          <span class="arrow">↗</span>
-        </article>
-        <article class="service reveal">
-          <span class="number">03</span>
-          <div><h3>AI Bots</h3><p>AI chatbotlar, savol-javob tizimlari, mijozlar bilan ishlash va AI avtomatizatsiya.</p></div>
-          <span class="arrow">↗</span>
-        </article>
-        <article class="service reveal">
-          <span class="number">04</span>
-          <div><h3>Automation</h3><p>Takroriy ishlarni avtomatlashtirish va biznes jarayonlarini tezlashtirish.</p></div>
-          <span class="arrow">↗</span>
-        </article>
-      </div>
-    </section>
 
-    <section id="work" class="section work">
-      <div class="section-head reveal">
-        <p class="eyebrow">03 / SELECTED WORK</p>
-        <h2>Tanlangan <span>ishlar.</span></h2>
-      </div>
-      <div class="project-grid">
-        <article class="project project-large reveal">
-          <div class="project-visual web-demo">
-            <div class="browser"><i></i><i></i><i></i></div>
-            <div class="demo-lines"><b>YOUR BRAND</b><strong>Build something<br>people remember.</strong><small>Modern / Fast / Responsive</small></div>
-          </div>
-          <div class="project-meta"><span>01 — WEB</span><h3>Business Landing Page</h3><p>Premium biznes sayti konsepti</p></div>
-        </article>
-        <article class="project reveal">
-          <div class="project-visual bot-demo"><div class="bot-icon">✦</div><b>TELEGRAM</b><span>BOT SYSTEM</span></div>
-          <div class="project-meta"><span>02 — BOT</span><h3>Telegram Automation</h3><p>Buyurtma va admin tizimi</p></div>
-        </article>
-        <article class="project reveal">
-          <div class="project-visual ai-demo"><div class="ai-ring">AI</div><b>SMART ASSISTANT</b><span>24 / 7</span></div>
-          <div class="project-meta"><span>03 — AI</span><h3>AI Chatbot</h3><p>Mijozlar bilan aqlli muloqot</p></div>
-        </article>
-      </div>
-    </section>
+    <!-- SKILLS -->
 
-    <section class="section process">
-      <div class="section-head reveal">
-        <p class="eyebrow">04 / JARAYON</p>
-        <h2>Qanday <span>ishlayman?</span></h2>
-      </div>
-      <div class="process-grid">
-        <div class="step reveal"><b>01</b><h3>DISCOVER</h3><p>Vazifa, auditoriya va maqsadni aniqlaymiz.</p></div>
-        <div class="step reveal"><b>02</b><h3>DESIGN</h3><p>Struktura va zamonaviy vizual konsept tayyorlanadi.</p></div>
-        <div class="step reveal"><b>03</b><h3>BUILD</h3><p>Sayt yoki botni kodlab, funksiyalarni ulayman.</p></div>
-        <div class="step reveal"><b>04</b><h3>LAUNCH</h3><p>Test, optimizatsiya va ishga tushirish.</p></div>
-      </div>
-    </section>
+    <section id="skills">
 
-    <section id="contact" class="section contact">
-      <div class="contact-inner reveal">
-        <p class="eyebrow">05 / ALOQA</p>
-        <h2>Biror <em>g‘oya</em> bormi?</h2>
-        <p>Uni birga real loyihaga aylantiramiz.</p>
-        <a class="email" href="mailto:@aSQAROV_0207"> <span>↗</span></a>
-        <div class="contact-links">
-          <a href="#" target="_blank">Telegram ↗</a>
-          <a href="#" target="_blank">Instagram ↗</a>
-          <a href="#" target="_blank">GitHub ↗</a>
+        <div class="container">
+
+            <div class="section-top reveal">
+
+                <div>
+
+                    <div class="section-label">
+                        03 / Skills
+                    </div>
+
+                    <h2 class="section-title">
+                        Texnologiyalar
+                    </h2>
+
+                </div>
+
+                <p class="section-text">
+                    Loyihaga qarab mos texnologiyalarni
+                    tanlayman.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill reveal">
+                    <span class="skill-number">01</span>
+                    <span class="skill-name">PHP / MySQL</span>
+                </div>
+
+                <div class="skill reveal">
+                    <span class="skill-number">02</span>
+                    <span class="skill-name">Python</span>
+                </div>
+
+                <div class="skill reveal">
+                    <span class="skill-number">03</span>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+
+                <div class="skill reveal">
+                    <span class="skill-number">04</span>
+                    <span class="skill-name">HTML / CSS</span>
+                </div>
+
+                <div class="skill reveal">
+                    <span class="skill-number">05</span>
+                    <span class="skill-name">Telegram Bots</span>
+                </div>
+
+                <div class="skill reveal">
+                    <span class="skill-number">06</span>
+                    <span class="skill-name">WordPress</span>
+                </div>
+
+                <div class="skill reveal">
+                    <span class="skill-number">07</span>
+                    <span class="skill-name">Git / Railway</span>
+                </div>
+
+                <div class="skill reveal">
+                    <span class="skill-number">08</span>
+                    <span class="skill-name">AI Integration</span>
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
-  </main>
 
-  <footer>
-    <span>© 2026 ABDULLOH</span>
-    <span>WEB • BOTS • AI</span>
-    <span>BUILT WITH INTENT.</span>
-  </footer>
 
-  <script src="script.js"></script>
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-top reveal">
+
+                <div>
+
+                    <div class="section-label">
+                        04 / Contact
+                    </div>
+
+                    <h2 class="section-title">
+                        Aloqa
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact">
+
+
+                <div class="contact-main reveal">
+
+                    <div class="section-label">
+                        Yangi loyiha
+                    </div>
+
+                    <h2>
+                        G‘OYANGIZNI
+                        <span>REAL</span>
+                        MAHSULOTGA
+                        AYLANTIRAMIZ.
+                    </h2>
+
+                    <p>
+                        Web sayt, Telegram bot yoki boshqa
+                        raqamli loyiha bo‘yicha bog‘lanishingiz
+                        mumkin. Loyiha haqida qisqacha yozing
+                        va Telegram orqali murojaat qiling.
+                    </p>
+
+                    <div>
+
+                        <a
+                            href="https://t.me/Asqarov_0207"
+                            target="_blank"
+                            class="button button-primary"
+                        >
+                            Telegramda bog‘lanish →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card reveal">
+
+                    <div class="contact-card-title">
+                        Aloqa ma’lumotlari
+                    </div>
+
+
+                    <a
+                        href="https://t.me/Asqarov_0207"
+                        target="_blank"
+                        class="contact-item telegram"
+                    >
+
+                        <div class="contact-icon">
+                            TG
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Telegram
+                            </small>
+
+                            <strong>
+                                @Asqarov_0207
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            UZ
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Joylashuv
+                            </small>
+
+                            <strong>
+                                O‘zbekiston
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            DEV
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Yo‘nalish
+                            </small>
+
+                            <strong>
+                                Full-Stack Developer
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div class="footer-brand">
+            CYBER <span>ABDULLOH</span>
+        </div>
+
+        <div>
+            © <?php echo date("Y"); ?> Abdulloh Asqarov
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const observer =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    revealElements.forEach((element) => {
+
+        observer.observe(element);
+
+    });
+
+</script>
+
 </body>
 </html>
