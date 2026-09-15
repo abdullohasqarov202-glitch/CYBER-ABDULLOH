@@ -152,7 +152,7 @@
         <p class="eyebrow">05 / ALOQA</p>
         <h2>Biror <em>g‘oya</em> bormi?</h2>
         <p>Uni birga real loyihaga aylantiramiz.</p>
-        <a class="email" href="mailto:your@email.com">your@email.com <span>↗</span></a>
+        <a class="email" href="mailto:@aSQAROV_0207"> <span>↗</span></a>
         <div class="contact-links">
           <a href="#" target="_blank">Telegram ↗</a>
           <a href="#" target="_blank">Instagram ↗</a>
